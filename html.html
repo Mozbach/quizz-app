@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css.css" type="text/css">
-    <title>Document</title>
+    <title>Quiz App</title>
 </head>
 <body>
     
-    
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">Question Text</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="" id="a" class="answer">
+                    <label for="a" id="a_text">Question A</label>
+                </li>
+                <li>
+                    <input type="radio" name="" id="b" class="answer">
+                    <label for="b" id="b_text">Question B</label>
+                </li>
+                <li>
+                    <input type="radio" name="" id="c" class="answer">
+                    <label for="c" id="c_text">Question C</label>
+                </li>
+                <li>
+                    <input type="radio" name="" id="d" class="answer">
+                    <label for="d" id="d_text">Question D</label>
+                </li>
+            </ul>
+        </div>
+        <button id="submit">Submit</button>
+    </div>
 
     <script src="js.js"></script>
     <script src="https://kit.fontawesome.com/1b7675ba25.js" crossorigin="anonymous"></script>
