@@ -34,7 +34,7 @@ const quizData = [
 ];
 
 const quiz = document.getElementById("quiz");
-const answerEls = document.querySelectorAll('.asnwer');
+const answerEls = document.querySelectorAll('.answer');
 const questionEl = document.getElementById("question");
 const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
@@ -76,5 +76,23 @@ function getSelected() {
 
 submitBtn.addEventListener('click', () => {
     const answer = getSelected();
-    console.log(answer);
+    
+    if(answer) { // returns true if an answer is selected
+        if(answer === quizData[currentQuiz].correct) {
+            score++;
+        }
+
+        currentQuiz++;
+
+        if(currentQuiz < quizData.length) {
+            loadQuiz();
+        } else {
+            quiz.innerHTML = 
+            `
+            <h2>You answered ${score} / ${quizData.length} questions correctly.</h2>
+            <button onClick="location.reload()">Reload</button>
+            `
+        }
+    }
+
 });
